@@ -1,49 +1,53 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <style>
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-  <header>
+    <header>
+        <h1>Contacto</h1>
+    </header>
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="proyectos.html">Proyectos</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos.html">Proyectos</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
     </nav>
-  </header>
-
-  <main>
     <section>
-      <h2>Contacto</h2>
-      <form action="enviar.php" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" name="apellido" required>
-
-        <label for="celular">Celular:</label>
-        <input type="tel" id="celular" name="celular" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" required></textarea>
-
-        <button type="submit">Enviar</button>
-        <button type="reset">Cancelar</button>
-      </form>
+        <h2>Contacto</h2>
+        <form action="" method="">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre"><br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido"><br>
+            <label for="celular">Celular:</label>
+            <input type="tel" name="tel"><br>
+            <label for="email">Email:</label>
+            <input type="email" name="email"><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea><br>
+            <input type="button" value="Enviar">
+            <input type="button" value="Cancelar">
+        </form>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; [Tu Nombre] - [Año Actual]</p>
-  </footer>
+    <a href="index.html">Ir a inicio</a>
 </body>
+<footer>
+  <p>Cristiandelmar &copy;  tecnico  telecomunicaciones SOL NET <img src="FOTOS/solnet.jpg" alt="SOLNET" width="30"></p>
+</footer>
 </html>
