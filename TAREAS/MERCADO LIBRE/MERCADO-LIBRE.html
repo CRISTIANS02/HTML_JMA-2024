@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nav-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-dots .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .nav-dots .dot.active {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagenes/LOGO.png" alt="Logo de Mercado Libre">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="black">Laptos</a></li>
+                <li><a href="green">Smarphone</a></li>
+                <li><a href="#">IPad</a></li>
+                <li><a href="#">Iphones</a></li>
+                <li><a href="#">electronica</a></li>
+                <li><a href="#">tecnologia</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos...">
+            <button>Buscar</button>
+        </div>
+    </header>
+
+    <div class="slider">
+        <div class="slide">
+            <img src="imagenes/FONDO.webp" alt="Imagen 1">
+        </div>
+        <div class="slide">
+            <img src="imagenes/FONDO2.webp" alt="Imagen 2">
+        </div>
+        <div class="slide">
+            <img src="imagenes/FONDO3.webp" alt="Imagen 3">
+        </div>
+        <div class="slide">
+            <img src="imagenes/FONDO4.webp" alt="Imagen 4">
+        </div>
+
+        <div class="nav-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+    <main>
+        <section>
+            <h2>Productos Destacados</h2>
+            <div class="product-box">
+                <div class="product-item">
+                    <img src="imagenes/IPAD-PRO@1.jpg" alt="Producto 1" class="product-img">
+                    <div class="product-text">Texto del Producto 1</div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/IPAD-PRO@1.jpg" alt="Producto 2" class="product-img">
+                    <div class="product-text">Texto del Producto 2</div>
+                </div>
+                <div class="product-item">
+                    <img src="imagenes/IPAD-PRO@3.jpg" alt="Producto 3" class="product-img">
+                    <div class="product-text">Texto del Producto 3</div>
+                </div>
+                <!-- Repite este patrón para los demás productos -->
+            </div>
+        </section>
+        <section>
+            <h2>Categorías</h2>
+            <ul class="categories">
+                <li><a href="#">Laptos</a></li>
+                <li><a href="#">Smarphone</a></li>
+                <li><a href="#">IPad</a></li>
+                <li><a href="#">Iphones</a></li>
+                <li><a href="#">electronica</a></li>
+                <li><a href="#">tecnologia</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <br>CONTACTP: CRISTIANDELMAR2000OUTLOOK.ES
+        <br> CELULAR: 901540374
+        <br> DIRECCION: q 12 # 12-12
+        <br> BARRIO: COLLANA
+        <br> DEPARTAMENTO:AYACUCHO
+        <br> CIUDAD: PUQUIO
+        <br> PAIS: PERU
+        <br> EMAIL: CRISTIANDELMAR02@GMAIL.COM
+        <nav>
+            <ul>
+                <li><a href="#">Acerca de Nosotros</a></li>
+                <li><a href="#">Términos y Condiciones</a></li>
+                <li><a href="#">Política de Privacidad</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = Array.from(slider.querySelectorAll('.slide'));
+        const dots = Array.from(slider.querySelectorAll('.dot'));
+
+        let currentIndex = 0;
+
+        function goToSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            const nextIndex = (currentIndex + 1) % slides.length;
+            goToSlide(nextIndex);
+        }
+
+        slider.addEventListener('click', nextSlide);
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        goToSlide(0);
+    </script>
+</body>
+</html>

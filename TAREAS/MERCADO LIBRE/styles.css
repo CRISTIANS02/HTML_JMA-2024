@@ -1,0 +1,175 @@
+/* Estilos generales */
+body {
+    background-color: rgb(230, 230, 223);
+    font-family: cursive, sans-serif;
+    margin: 1;
+    padding: 0;
+  }
+  
+  /* Estilos para las imágenes de productos */
+.product-img {
+    display: inline-block;
+    margin: 10px;
+    max-width: 200px;
+  }
+
+  /* Estilos para el header */
+  header {
+    background-color: #e6e215;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header img {
+    max-width: 150px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  nav ul li {
+    margin-right: 20px;
+  }
+  
+  /* Estilos para el main */
+  main {
+    padding: 20px;
+  }
+  
+  .product-box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product {
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .product img {
+    max-width: 150%;
+  }
+  
+  .product p {
+    margin-top: 10px;
+  }
+  
+  /* Estilos para las categorías */
+  .categories {
+    list-style-type: none;
+    padding: 10;
+  }
+  
+  .categories li {
+    margin-bottom: 20px;
+  }
+  .product-img {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+  }
+  .product-img {
+    transition: transform 0.3s;
+  }
+  
+  .product-img:hover {
+    transform: scale(1.1);
+  }
+  .product-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 150px;
+  }
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .product-img {
+    margin-right: 10px;
+  }
+  
+  .product-text {
+    flex-grow: 1;
+    text-align: right;
+  }
+
+  
+  .slider {
+    width: 100%;
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 100%;
+    animation: slide 20s infinite; /* Ajusta la duración de la animación según tus preferencias */
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes slide {
+    0% {
+      right: 0;
+    }
+    20% {
+      right: 0;
+    }
+    25% {
+      right: 100%;
+    }
+    45% {
+      right: 100%;
+    }
+    50% {
+      right: 200%;
+    }
+    70% {
+      right: 200%;
+    }
+    75% {
+      right: 300%;
+    }
+    95% {
+      right: 300%;
+    }
+    100% {
+      right: 400%;
+    }
+  }
+  .nav-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .nav-dots .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .nav-dots .dot.active {
+    background-color: #555;
+  }
+  
